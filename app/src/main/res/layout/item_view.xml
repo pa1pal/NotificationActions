@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     app:cardUseCompatPadding="true"
-    app:cardElevation="2dp">
+    app:cardElevation="4dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,15 +15,30 @@
             android:id="@+id/actionTxtVw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="monospace"
             android:padding="8dp"
             android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/requestTxtVw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
             android:padding="8dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/suggestionRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:listitem="@layout/suggestion_view"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
